@@ -5,9 +5,6 @@ fun main() {
     val outputFileName = "src/main/resources/MergeSortOutputArray.txt"
     val input = readFileAsLinesUsingBufferedReader(inputFileName).map { it.toInt() }.toIntArray()
     val result = mergeSort(input)
-//    println("Operations = ${pair.first}")
-//    println("==========================")
-//    pair.second.map { println(it) }
     val outputFile = File(outputFileName).printWriter()
     outputFile.use { out ->
         out.println(result.contentToString())
